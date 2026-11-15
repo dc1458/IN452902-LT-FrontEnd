@@ -1,0 +1,36 @@
+/* Câu 1b: viết CSS tại đây */
+.site-nav__link {
+    display: flex;
+    align-items: center;
+    min-block-size: 2.75rem;          /* vùng chạm ≥ 44px */
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-full);
+    color: var(--color-header-text);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+    transition: background-color var(--duration-fast) ease;
+
+    &:hover {
+    background-color: rgb(255 255 255 / 0.12);
+    }
+
+    /* Trang hiện tại: chọn theo thuộc tính aria-current đã có từ Ch01 */
+    &[aria-current="page"] {
+    background-color: var(--color-accent);
+    color: var(--palette-blue-900);
+    }
+
+    @media (width >= 40rem) {
+    font-size: var(--text-base);
+    padding-inline: var(--space-4);
+    }
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: 0;
+  list-style: none;
+}
